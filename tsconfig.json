@@ -1,6 +1,22 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
+    "strict": true,
+    "baseUrl": "./src",
+    "jsx": "react",
+    "paths": {
+      "@/*": [ "./*" ],
+      "@shared-components/*": ["./shared/components/*"],
+      "@shared-config/*": ["./shared/config/*"],
+      "@styles": ["./shared/styles/index"],
+      "@hooks/*": ["./hooks/*"],
+      "@screens/*": ["./screens/*"],
+      "@assets/*": ["./assets/*"],
+      "@images/*": ["./assets/images/*"],
+      "@poke/*": ["./api/poke/*"],
+      "@navigation/*": ["./navigation/*"],
+      "@shared/*": ["./shared/*"],
+      "@store": ["./redux/index"],
+    },         
   }
 }
